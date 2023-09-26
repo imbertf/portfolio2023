@@ -1,0 +1,8 @@
+.darkMode {
+  background: $blue;
+
+  & p,
+  h1 {
+    color: $light;
+  }
+}

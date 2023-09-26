@@ -1,0 +1,8 @@
+.lightMode {
+  background: $light;
+
+  & p,
+  h1 {
+    color: $blue;
+  }
+}

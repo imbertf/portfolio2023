@@ -1,0 +1,15 @@
+// utils
+@import "./styles/utils/variables.scss";
+
+// base
+@import "./styles/base/normalize.scss";
+@import "./styles/base/darkMode.scss";
+@import "./styles/base/lightMode.scss";
+@import "./styles/base/app.scss";
+
+// pages
+
+// component
+@import "./styles/components/buttons/themeModeButton.scss";
+@import "./styles/components/navbar/navbar.scss";
+@import "./styles/components//projectCardComponent.scss";
