@@ -1,21 +1,35 @@
 // react
-import React, { useContext } from "react";
+import React, { useContext, useLayoutEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 // utils
 import { DarkModeContext } from "./utils/ThemeProvider";
 
 // sections
 import HomePage from "./pages/HomePage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProjectPage from "./pages/ProjectPage";
+
+// functions
+// Automatically scroll to top page after using Link
+const ScrollToTop = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
   return (
     <div className={`app ${darkMode ? "lightMode" : "darkMode"}`}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/project" element={<ProjectPage />}></Route>
+          </Routes>
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );

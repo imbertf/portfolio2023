@@ -30,12 +30,12 @@ import NavBarComponent from "../components/NavBarComponent";
 import ExperienceCardComponent from "../components/cards/ExperienceCardComponent";
 import DownloadFileButton from "../components/buttons/DownloadFileButtonComponent";
 import ProjectCardComponent from "../components/cards/ProjectCardComponent";
+import ScrollToTopButtonComponent from "../components/buttons/ScrollToTopButtonComponent";
 
 // images
 import cap_logo from "../medias/images/cookingAppProject/logo.png";
 import kasa_logo from "../medias/images/kasa/logo.png";
 import piiquante_logo from "../medias/images/piiquante/piiquante.jpg";
-import ScrollToTopButtonComponent from "../components/buttons/ScrollToTopButtonComponent";
 import ContactForm from "../components/ContactForm";
 
 // functions
@@ -278,7 +278,7 @@ const HomePage = () => {
                 date={"2019 - 2023"}
                 title={"Superviseur logistique, Amazon"}
                 text={
-                  'Encadrement d\'un équipe logistique et transport. Gestion et suivit de projets. Réalisation du planning et suivit de formation des "associates". Exploitation de KPI afin de définir les objectifs quotidiens. Gestion de flux logistique et utilisation de TMS et WMS. Relation client avec les transporteurs'
+                  'Encadrement d\'une équipe logistique et transport. Gestion et suivit de projets. Réalisation du planning et suivit de formation des "associates". Exploitation de KPI afin de définir les objectifs quotidiens. Gestion de flux logistique et utilisation de TMS et WMS. Relation client avec les transporteurs'
                 }
                 icons={[
                   <FaAmazon style={{ color: theme.palette.tertiary.orange }} />,
@@ -307,23 +307,25 @@ const HomePage = () => {
             </Stack>
           </Box>
           <Box component={"section"} mb={15} id="projects">
-            <ProjectCardComponent
-              image={cap_logo}
-              date={"juillet 2023 - actuel"}
-              title={"MERN Stack App"}
-              text={
-                "A destination des étudiants en école hôtelières. Accès aux recettes nécéssaires à la préparation des diplômes allant du CAP à la Licence. Les étudiants peuvent consulter un lexique des termes culinaires et disposent d'un bloc note. L'administrateur à quand à lui accès à un tableau de bord permettant l'ajout, la modification et la suppression des utilisateurs, termes techniques et recettes."
-              }
-              icons={[
-                <FaReact
-                  style={{ color: theme.palette.secondary.blueGreen }}
-                />,
-                <FaNodeJs style={{ color: "green" }} />,
-                <SiMui style={{ color: "dodgerBlue" }} />,
-                <BiLogoMongodb style={{ color: "green" }} />,
-              ]}
-              link={"github.com/imbertf/cooking-app-project"}
-            />
+            <Link to={"/project"}>
+              <ProjectCardComponent
+                image={cap_logo}
+                date={"juillet 2023 - actuel"}
+                title={"MERN Stack App"}
+                text={
+                  "A destination des étudiants en école hôtelières. Accès aux recettes nécéssaires à la préparation des diplômes allant du CAP à la Licence. Les étudiants peuvent consulter un lexique des termes culinaires et disposent d'un bloc note. L'administrateur à quand à lui accès à un tableau de bord permettant l'ajout, la modification et la suppression des utilisateurs, termes techniques et recettes."
+                }
+                icons={[
+                  <FaReact
+                    style={{ color: theme.palette.secondary.blueGreen }}
+                  />,
+                  <FaNodeJs style={{ color: "green" }} />,
+                  <SiMui style={{ color: "dodgerBlue" }} />,
+                  <BiLogoMongodb style={{ color: "green" }} />,
+                ]}
+                link={"github.com/imbertf/cooking-app-project"}
+              />
+            </Link>
             <ProjectCardComponent
               image={kasa_logo}
               date={"nov 2022 - dec 2022"}
