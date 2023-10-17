@@ -12,6 +12,7 @@ import MediaLinks from "../components/MediaLinksComponent";
 // material ui
 import {
   Box,
+  CardContent,
   List,
   ListItem,
   Stack,
@@ -119,6 +120,21 @@ const HomePage = () => {
               <BiLogoMongodb style={{ color: "green" }} />
             </Stack>
             <NavBarComponent />
+            <Box maxWidth={450} mt={{ xs: 0, sm: 3 }}>
+              <CardContent>
+                <Typography variant="body2" fontStyle="italic" gutterBottom>
+                  {
+                    "\"Florian fait preuve, à la fois, de beaucoup de rigueur et d'esprit critique, des qualités très appréciés aujourd’hui pour appliquer des process tout en les questionnant pour les faire évoluer. J'ai eu l'occasion d'encadrer Florian pendant 3 ans chez Amazon à divers postes. Il a su monter une grande flexibilité et une rapide adaptation dans un environnement très changeant. J'ai particulièrement apprécié sa capacité de rester calme dans des situations difficiles et de bien identifier les priorités. Mais ce qui m'a le plus impressionné, c'est sa soif d'apprendre et de sortir de sa zone de confort. Des qualités qu’il a su mettre en application sur le terrain au travers d'outils qu'il a lui-même développé.Il sera un atout majeur dans toute organisation quelque soit le métier qu’il aura choisi.\""
+                  }
+                </Typography>
+                <Stack alignItems={"flex-end"}>
+                  <Typography color="text.secondary">Alaeddine Y.</Typography>
+                  <Typography variant="caption" color={"lightGrey"}>
+                    Consultant en transformation industrielle
+                  </Typography>
+                </Stack>
+              </CardContent>
+            </Box>
           </Box>
         </Stack>
         <Box
@@ -127,6 +143,19 @@ const HomePage = () => {
           width={{ xs: "100%", lg: "45%" }}
           id="about"
         >
+          <Typography component="h2" variant="h3" sx={{ fontStyle: "italic" }}>
+            <span
+              style={{
+                color:
+                  darkMode === false
+                    ? theme.palette.tertiary.green
+                    : theme.palette.tertiary.yellow,
+              }}
+            >
+              A propos
+            </span>
+          </Typography>
+
           <Stack spacing={2} mb={10}>
             <Typography>
               <span
@@ -140,6 +169,39 @@ const HomePage = () => {
               </span>{" "}
             </Typography>
             <Typography textAlign={"justify"}>
+              <span
+                style={
+                  darkMode === false
+                    ? { color: theme.palette.tertiary.orange }
+                    : { color: theme.palette.secondary.blueGreen }
+                }
+              >
+                Intégration
+              </span>{" "}
+              de maquette{" "}
+              <span
+                style={
+                  darkMode === false
+                    ? { color: theme.palette.tertiary.orange }
+                    : { color: theme.palette.secondary.blueGreen }
+                }
+              >
+                responsive
+              </span>{" "}
+              HTML5, CSS3 avec ou sans preprocesseur SASS(SCSS) et JavaScript
+              Vanilla ou React.{" "}
+              <span
+                style={
+                  darkMode === false
+                    ? { color: theme.palette.tertiary.orange }
+                    : { color: theme.palette.secondary.blueGreen }
+                }
+              >
+                Développement
+              </span>{" "}
+              d'API REST en Node js / Express js / Mongo DB.
+              <br />
+              <br />
               Une capacité de{" "}
               <span
                 style={
@@ -255,6 +317,22 @@ const HomePage = () => {
           </Stack>
 
           <Box component={"section"} mb={15} id="experiences">
+            <Typography
+              component="h2"
+              variant="h3"
+              sx={{ fontStyle: "italic" }}
+            >
+              <span
+                style={{
+                  color:
+                    darkMode === false
+                      ? theme.palette.tertiary.green
+                      : theme.palette.tertiary.yellow,
+                }}
+              >
+                Expériences
+              </span>
+            </Typography>
             <Stack>
               <ExperienceCardComponent
                 date={"mars - actuel"}
@@ -307,6 +385,23 @@ const HomePage = () => {
             </Stack>
           </Box>
           <Box component={"section"} mb={15} id="projects">
+            <Typography
+              component="h2"
+              variant="h3"
+              sx={{ fontStyle: "italic" }}
+            >
+              <span
+                style={{
+                  color:
+                    darkMode === false
+                      ? theme.palette.tertiary.green
+                      : theme.palette.tertiary.yellow,
+                }}
+              >
+                Projets
+              </span>
+            </Typography>
+
             <Link to={"/project"}>
               <ProjectCardComponent
                 image={cap_logo}
