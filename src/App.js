@@ -5,9 +5,10 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 // utils
 import { DarkModeContext } from "./utils/ThemeProvider";
 
-// sections
+// pages
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+import Page404 from "./pages/Page404";
 
 // functions
 // Automatically scroll to top page after using Link
@@ -28,6 +29,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/project" element={<ProjectPage />}></Route>
+            <Route path="/*" element={<Page404 />}></Route>
           </Routes>
         </ScrollToTop>
       </BrowserRouter>
