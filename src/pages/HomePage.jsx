@@ -25,6 +25,8 @@ import { FaReact, FaSass, FaNodeJs, FaAmazon } from "react-icons/fa6";
 import { SiMui } from "react-icons/si";
 import { GiRadarSweep } from "react-icons/gi";
 import { BiLogoMongodb } from "react-icons/bi";
+import { FaPhp } from "react-icons/fa";
+import { FaWordpress } from "react-icons/fa";
 
 // components
 import NavBarComponent from "../components/NavBarComponent";
@@ -335,8 +337,8 @@ const HomePage = () => {
             </Typography>
             <Stack>
               <ExperienceCardComponent
-                date={"mars - actuel"}
-                title={"Web Developer"}
+                date={"mars 2023 - actuel"}
+                title={"Développeur web, indépendant"}
                 text={
                   "Création de plusieurs sites vitrines pour des entreprises en Single Page Application, React js. Réunion en visio pour définir les besoins du client, élaborer la charte graphique, le contenu et convenir d'un le délais de réalisation."
                 }
@@ -346,11 +348,23 @@ const HomePage = () => {
                   />,
                 ]}
                 links={[
+                  "aupizzanyl.fr",
                   "adhterrassement.fr",
                   "masweetdecobymd.fr",
                   "delamesenfils.fr",
                   "transports-rauwel.fr",
                 ]}
+              />
+              <ExperienceCardComponent
+                date={"octobre 2023 - novembre 2023"}
+                title={"Stage développeur web, Atmédia & Partner's"}
+                text={`Web design, intégration, déploiement et participation au projet d’évolution et de refonte des sites internet. Développement 3D d’un produit avec Model viewer dans le cadre d’un nouveau projet. Test d’intégration et responsivité sur différents navigateurs et médias. Test des fonctionnalités et du parcours utilisateur, recette. Rédaction de documentation technique et veille.
+                `}
+                icons={[
+                  <FaPhp style={{ color: "#8993be" }} />,
+                  <FaWordpress />,
+                ]}
+                links={["atmedia.fr"]}
               />
               <ExperienceCardComponent
                 date={"2019 - 2023"}

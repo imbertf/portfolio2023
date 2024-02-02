@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import {
   Card,
-  CardActions,
   CardContent,
   Button,
   Typography,
@@ -32,7 +31,7 @@ const ExperienceCardComponent = ({ date, title, icons, text, links }) => {
             display: "flex",
             p: "0 ",
             flexDirection: { xs: "column", sm: "row" },
-            justifyContent: "flex-start",
+            justifyContent: "space-between",
           }}
         >
           <Box>
@@ -70,9 +69,7 @@ const ExperienceCardComponent = ({ date, title, icons, text, links }) => {
                 </Typography>
               ))}
             </Stack>
-            <Typography variant="body1" textAlign={"justify"}>
-              {text}
-            </Typography>
+            <Typography variant="body1">{text}</Typography>
             <Stack>
               {links.map((link, index) => (
                 <Link
